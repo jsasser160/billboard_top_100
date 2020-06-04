@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  resources :pages
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+root 'billboards#index'
+
+resources :billboards
+resources :artists do
+  resources :songs
+end
 end
